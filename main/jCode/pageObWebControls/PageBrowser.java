@@ -20,6 +20,7 @@ public final class PageBrowser
 	public PageBrowser(String browserType)
 	{switch(browserType)
 		{
+			/*one might want to make that configurable*/
 		case "FF": 	System.setProperty("webdriver.gecko.driver","C:/apps/javadeps/geckodriver.exe");
 					driver=new FirefoxDriver();
 		break;
@@ -35,7 +36,7 @@ public final class PageBrowser
 	{
 		driver.navigate().to(url);
 		//get the pagenumber here to check what page should be returned
-		//return the finePage with its identifier to check correct page. 
+		//return the Page with its identifier to check correct page. 
 	}
 
 	public static WebDriver getDriver()
