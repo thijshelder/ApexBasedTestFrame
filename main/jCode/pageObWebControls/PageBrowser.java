@@ -52,7 +52,7 @@ public final class PageBrowser
 	
 	public void findAllClickableElements()
 	{
-		//find everything with href and onclick
+		//find everything with href and onclick. NB: only meant as a check, not to do the actual work. 
 		List<WebElement> clickables;
 		while(!driver.findElement(By.tagName("body")).isDisplayed());
 				{
@@ -83,7 +83,7 @@ public final class PageBrowser
 		}
 	}
 	public void findAllInputFields()
-	{
+	{/*See the remark with findAllClickableElements*/
 		List<WebElement> fillables;
 		while(!driver.findElement(By.tagName("body")).isDisplayed());
 		fillables = driver.findElements(By.tagName("input"));
